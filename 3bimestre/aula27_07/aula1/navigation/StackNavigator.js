@@ -10,34 +10,17 @@ const Stack = createNativeStackNavigator();
 export default function StackNavigator() {
   return (
     <NavigationContainer>
-
       <Stack.Navigator
         initialRouteName="Inicial"
         screenOptions={{
-          headerStyle: {
-            backgroundColor: '#000000',
-          },
-          headerTintColor: '#FFD700',
+          headerShown: false,
+          animation: 'slide_from_right',
         }}
       >
-
-        <Stack.Screen
-          name="Inicial"
-          component={Inicial}
-        />
-
-        <Stack.Screen
-          name="Login"
-          component={Login}
-        />
-
-        <Stack.Screen
-          name="Final"
-          component={Final}
-        />
-
+        <Stack.Screen name="Inicial" component={Inicial} />
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Final" component={Final} />
       </Stack.Navigator>
-
     </NavigationContainer>
   );
 }
